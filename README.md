@@ -19,11 +19,12 @@ Assumptions:
 ### Input
 - place .pbf files in OpenStreetMapFiles directory
 
-  ![Input file image](/images/open-street-map-input-files.jpg?raw=true)
+  ![Input file image](/images/open-street-map-input-files.JPG?raw=true)
 
 ### Output 
 All POIs (places) are stored in MongoDB, `Database: Places, Collection: osmV{version}` . You can check them in MongoDB-Express (defult url: `http://localhost:8081`)
-![DB Output Image](/images/mongo-db-output-results.jpg)
+
+![DB Output Image](/images/mongo-db-output-results.JPG?raw=true)
 
 ### Additional Configuration
 
