@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenStreetMap.Importer", "src\OpenStreetMap.Importer\OpenStreetMap.Importer.csproj", "{B99D4035-72A6-412F-9594-B1FF26FCCE25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3A003D76-2470-4895-9CDA-830CA11A3791}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CF0B0C66-76AB-49FC-9C78-600085D149FA}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DC386ACA-E65F-4515-9E30-80E5EC3C4283}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenStreetMap.Infrastructure", "src\OpenStreetMap.Infrastructure\OpenStreetMap.Infrastructure.csproj", "{40D69708-175E-409D-AED8-7EAB284F6312}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenStreetMap.Common", "src\OpenStreetMap.Common\OpenStreetMap.Common.csproj", "{F354C4AA-2124-4238-9D5B-1BADF481AB2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenStreetMap.Tests.Unit", "tests\OpenStreetMap.Tests.Unit\OpenStreetMap.Tests.Unit.csproj", "{B525ABFF-75AF-4C3F-A806-F082FCBC05CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		e2e|Any CPU = e2e|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B99D4035-72A6-412F-9594-B1FF26FCCE25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B99D4035-72A6-412F-9594-B1FF26FCCE25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B99D4035-72A6-412F-9594-B1FF26FCCE25}.e2e|Any CPU.ActiveCfg = Release|Any CPU
+		{B99D4035-72A6-412F-9594-B1FF26FCCE25}.e2e|Any CPU.Build.0 = Release|Any CPU
+		{B99D4035-72A6-412F-9594-B1FF26FCCE25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B99D4035-72A6-412F-9594-B1FF26FCCE25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC386ACA-E65F-4515-9E30-80E5EC3C4283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC386ACA-E65F-4515-9E30-80E5EC3C4283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC386ACA-E65F-4515-9E30-80E5EC3C4283}.e2e|Any CPU.ActiveCfg = Release|Any CPU
+		{DC386ACA-E65F-4515-9E30-80E5EC3C4283}.e2e|Any CPU.Build.0 = Release|Any CPU
+		{DC386ACA-E65F-4515-9E30-80E5EC3C4283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC386ACA-E65F-4515-9E30-80E5EC3C4283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40D69708-175E-409D-AED8-7EAB284F6312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40D69708-175E-409D-AED8-7EAB284F6312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40D69708-175E-409D-AED8-7EAB284F6312}.e2e|Any CPU.ActiveCfg = Debug|Any CPU
+		{40D69708-175E-409D-AED8-7EAB284F6312}.e2e|Any CPU.Build.0 = Debug|Any CPU
+		{40D69708-175E-409D-AED8-7EAB284F6312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40D69708-175E-409D-AED8-7EAB284F6312}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F354C4AA-2124-4238-9D5B-1BADF481AB2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F354C4AA-2124-4238-9D5B-1BADF481AB2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F354C4AA-2124-4238-9D5B-1BADF481AB2E}.e2e|Any CPU.ActiveCfg = Debug|Any CPU
+		{F354C4AA-2124-4238-9D5B-1BADF481AB2E}.e2e|Any CPU.Build.0 = Debug|Any CPU
+		{F354C4AA-2124-4238-9D5B-1BADF481AB2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F354C4AA-2124-4238-9D5B-1BADF481AB2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B525ABFF-75AF-4C3F-A806-F082FCBC05CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B525ABFF-75AF-4C3F-A806-F082FCBC05CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B525ABFF-75AF-4C3F-A806-F082FCBC05CF}.e2e|Any CPU.ActiveCfg = Debug|Any CPU
+		{B525ABFF-75AF-4C3F-A806-F082FCBC05CF}.e2e|Any CPU.Build.0 = Debug|Any CPU
+		{B525ABFF-75AF-4C3F-A806-F082FCBC05CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B525ABFF-75AF-4C3F-A806-F082FCBC05CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B525ABFF-75AF-4C3F-A806-F082FCBC05CF} = {3A003D76-2470-4895-9CDA-830CA11A3791}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39C7FFCF-F7C0-480A-A540-2AD7876E07B4}
+	EndGlobalSection
+EndGlobal

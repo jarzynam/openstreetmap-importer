@@ -1,0 +1,50 @@
+version: '3.4'
+
+services:
+  openstreetmap-importer:
+    image: ${DOCKER_REGISTRY-}openstreetmap-importer
+    build:
+      context: .
+      dockerfile: src/OpenStreetMap.Importer/Dockerfile
+    depends_on:
+        - openstreetmap-mongo
+        - openstreetmap-seq  
+    environment:
+        - MongoDb=mongodb://openstreetmap-mongo:27017
+    networks:
+        - openstreetmap
+  openstreetmap-mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+        - './data:/data/db'
+    networks:
+        - openstreetmap
+
+  openstreetmap-mongo-express:
+    image: mongo-express
+    restart: always
+    depends_on:
+        - openstreetmap-mongo
+    ports:
+      - 8081:8081
+    environment:
+        - ME_CONFIG_MONGODB_SERVER=openstreetmap-mongo 
+  
+    networks:
+        - openstreetmap
+
+  openstreetmap-seq:
+    image: datalust/seq:latest
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - 8082:80
+    networks:
+      - openstreetmap
+  
+networks:
+  openstreetmap:
+    name: openstreetmap
