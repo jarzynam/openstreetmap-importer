@@ -7,7 +7,7 @@ Assumptions:
 - Program is importing [Nodes](https://wiki.openstreetmap.org/wiki/Node) and [Ways](https://wiki.openstreetmap.org/wiki/Way), other OSM types are ignored
 - If Place in OpenStreetMap is represented by area/polygon, it will be transformed to the single geograpchic point (calculated central point of polygon)
 
-  ![Calculation Image](/images/open-street-map-importer.png?raw=false)
+  ![Calculation Image](/images/open-street-map-importer.png?raw=true)
 - Program is importing only types specified in `PlaceGroups.cs` file, you can extend this list by modyfing the file
 - .pbf files are large, single import (like Poland) can take a couple of minutes, although program is optimized to not eat all your memory (despite docker-compose memory consumption)
 
@@ -19,11 +19,11 @@ Assumptions:
 ### Input
 - place .pbf files in OpenStreetMapFiles directory
 
-  <img src="images/open-street-map-input-files.jpg" width=50%></img>
+  ![Input file image](/images/open-street-map-input-files.jpg?raw=true)
 
 ### Output 
 All POIs (places) are stored in MongoDB, `Database: Places, Collection: osmV{version}` . You can check them in MongoDB-Express (defult url: `http://localhost:8081`)
-<img src="images/mongo-db-output-results.jpg"></img>
+![DB Output Image](/images/mongo-db-output-results.jpg)
 
 ### Additional Configuration
 
@@ -55,10 +55,10 @@ Local solution is setup with `docker-compose` to fetch all necessary docker imag
 1. Press F5 to start local debugging session
 1. You would debug API and Worker in the same time
 
-# How to test
+#### How to test
 Solution contains unit `OpenStreetMap.Tests.Unit` with *example* tests (for future extension)
 
 Run them with Standard Visual Studio test runner
 
-### MongoDB Explorer
+# MongoDB Explorer
 With [Mongo Express](https://github.com/mongo-express/mongo-express) You can explore the whole local mongo dabase by reaching `http://localhost:8081` in your browser.
